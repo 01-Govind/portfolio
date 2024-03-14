@@ -1,0 +1,655 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* stickyNavbar */
+/* CSS to style the fixed navbar */
+/* Style for sticky navbar */
+.navbar.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Add additional styles for your sticky navbar */
+}
+
+/* Adjust other styles as needed */
+
+
+
+
+.navbar {
+    height: 55px;
+    background-color: #F0F0F0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: black;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu a {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #0F1035;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .menu {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu a {
+        margin-bottom: 5px;
+    }
+
+    .about-section {
+        padding: 50px 20px; /* Adjust padding */
+        display: block;
+        text-align: center;
+    }
+
+    .about-left,
+    .about-right {
+        width: 100%;
+    }
+
+    .profile-picture {
+        width: 150px; /* Adjust profile picture size */
+        height: 150px; /* Adjust profile picture size */
+        margin: 0 auto 20px; /* Center profile picture */
+    }
+
+    .main-text {
+        padding-top: 20px; /* Adjust padding */
+    }
+
+    .buttons {
+        margin-top: 20px;
+        text-align: center; /* Center buttons */
+    }
+
+    .social-icons-container {
+        text-align: center; /* Center social icons */
+    }
+
+    .social-icons-container a {
+        margin: 0 10px; /* Adjust margin */
+    }
+}
+
+
+.para{
+display: block;
+}
+
+
+.about-section {
+    background-color: #fff;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-left {
+    flex: 1;
+}
+
+.about-right {
+    flex: 1;
+    position: relative;
+}
+
+.profile-picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-text {
+    padding-top: 90px;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+}
+
+.social-icons-container {
+    font-size: 32px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.social-icons-container a {
+    margin-top: 10px;
+    text-decoration: none;
+    color: black;
+    transition: transform 0.3s ease;
+}
+
+.social-icons-container a:hover {
+    transform: scale(1.2);
+}
+
+.about-me-section {
+    background-color: #F0F0F0;
+    padding: 50px;
+    text-align: center;
+}
+
+.about-me-heading {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.about-me-paragraph {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+
+/* responsive-navbar */
+/* Your existing CSS styles */
+
+/* Add this CSS for the menu icon and hidden menu items */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu.hidden {
+    display: none;
+}
+
+/* phone-navbarstyle */
+.phone-nav{
+    height: 100%;
+    width: 230px;
+    z-index: 2;    position: absolute;
+    top: 0;
+    left:-100%;
+    background-color: black;
+}
+
+.cancel-menu{
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    right:20px;
+}
+
+.menu-bar-style a {
+    color: white; /* Set text color to white */
+    display: block; /* Display each link on a new line */
+    margin-bottom: 10px; /* Add some space between each link */
+}
+.a-design{
+    text-decoration: none;
+}
+
+
+
+@media screen and (max-width: 615px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .menu.visible {
+        display: none;
+    }
+}
+
+
+
+/* Your existing CSS styles */
+
+/* Add this CSS for improved responsiveness */
+@media screen and (max-width: 768px) {
+    /* Adjustments for the about-section */
+    .about-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    .about-left,
+    .about-right {
+        width: 100%;
+        margin: 0;
+    }
+
+    .profile-picture {
+        width: 150px;
+        height: 150px;
+    }
+
+    .main-text {
+        padding-top: 20px;
+    }
+
+    .buttons {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .social-icons-container {
+        text-align: center;
+    }
+
+    .social-icons-container a {
+        margin: 0 10px;
+    }
+
+    /* Adjustments for the about-me-section */
+    .about-me-section {
+        padding: 50px 20px;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .about-me-section h1 {
+        font-size: 24px;
+    }
+
+    .about-me-paragraph {
+        font-size: 14px;
+    }
+}
+
+
+/* about-me-section-styling */
+
+/* Styling for subheadings */
+.subheadings-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.subheading {
+    position: relative; /* Set position to relative */
+    width: 30%; /* Adjust width as needed */
+    text-align: center;
+    background-color: #f0f0f0; /* Background color */
+    padding: 20px; /* Padding around subheadings */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold; /* Add font weight */
+    text-transform: uppercase; /* Convert text to uppercase */
+    transition: color 0.3s, font-weight 0.3s; /* Add transition for color and font weight */
+}
+
+/* Customizing each subheading */
+.left {
+    float: left;
+}
+
+.middle {
+    margin: 0 auto; /* Centering the middle subheading */
+}
+
+.right {
+    float: right;
+}
+
+/* Styling for h1 and p inside subheading */
+.subheading h1 {
+    margin-bottom: 10px; /* Add space below h1 */
+    font-size: 1.2em; /* Adjust font size */
+    color: #333; /* Change color of heading */
+}
+
+.subheading p {
+    font-size: 0.9em; /* Adjust font size */
+    text-transform: none; /* Remove uppercase transformation */
+    color: #555; /* Change color of paragraph */
+}
+
+/* Hover effect */
+.subheading::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Adjust as needed */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Height of the line */
+    background-color: black; /* Color of the line */
+    transform: scaleX(0); /* Initially set line width to zero */
+    transition: transform 0.3s; /* Add transition for line width */
+}
+
+.subheading:hover::after {
+    transform: scaleX(1); /* Expand line width on hover */
+}
+
+.subheading:hover {
+    cursor: pointer; /* Change cursor on hover */
+    font-weight: 700; /* Increase font weight on hover */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .subheadings-container {
+        flex-direction: column; /* Stack subheadings vertically */
+    }
+    .subheading {
+        width: 100%; /* Full width for each subheading */
+        margin-bottom: 20px; /* Add space between subheadings */
+    }
+}
+
+
+
+/* animation to these about section button  */
+/* Assuming you have font awesome icons included in your project */
+
+.buttons button::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    margin-right: 5px; /* Adjust as needed */
+}
+
+.mail-button::before {
+    content: '\f0e0'; /* Unicode for envelope icon */
+}
+
+.cv-button::before {
+    content: '\f0c7'; /* Unicode for download icon */
+}
+
+/* Add animation to buttons */
+.buttons button {
+    transition: all 0.3s ease-in-out;
+}
+
+.buttons button:hover {
+    transform: scale(1.1); /* Scale up the button on hover */
+    background-color: black; /* Change background color on hover */
+    color: #ffffff; /* Change text color on hover */
+}
+
+
+.about-section .para {
+    font-weight: bold; /* Make the text bold */
+    line-height: 1.7; /* Add space between lines */
+}
+
+
+
+/* Design of workSection */
+
+.work-section {
+    background-color: #ffffff; /* White background */
+    padding: 50px 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.primary-heading {
+    font-weight: bold;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.card {
+    width: 32%; /* Increase the width */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    transition: all 0.3s ease-in-out;
+    margin-right: 20px; /* Add margin between cards */
+}
+
+.card:last-child {
+    margin-right: 0; /* Remove margin for the last card */
+}
+
+
+
+.card:hover {
+    transform: translateY(-5px); /* Move the card up slightly on hover */
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.secondary-heading {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ffffff; /* White text color */
+}
+
+.github-link {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #ffffff; /* White icon color */
+}
+
+/* Adjustments for smaller screens */
+@media only screen and (max-width: 768px) {
+    .cards {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        align-items: center; /* Center cards horizontally */
+    }
+
+    .card {
+        width: 80%; /* Make cards wider on smaller screens */
+        margin: 0 0 20px 0; /* Add margin below each card */
+    }
+}
+
+
+/* contactSection-design */
+.contact-section {
+    background-color: #f9f9f9; /* Light gray background */
+    padding: 50px 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center; /* Center align text */
+}
+
+.primary-heading {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333; /* Dark gray color */
+}
+
+.sub-heading {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #666; /* Medium gray color */
+}
+
+.form-container {
+    margin-top: 50px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: calc(100% - 40px); /* Make input fields smaller */
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f2f2f2; /* Lighter gray background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Adjust box shadow on focus */
+}
+
+.send-button {
+    background:#0F1035; /* Black with transparency */
+    color: #fff;
+    padding: 15px 40px; /* Increase button size */
+    border: none;
+    border-radius: 30px; /* Adjust border radius */
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease; /* Add transition for smooth effect */
+    margin-top: 20px; /* Adjust margin for better alignment */
+    left: -20px; /* Shift button towards the left */
+}
+
+.send-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    width: 300%;
+    height: 300%;
+    background-color: #7FC7D9; /* Light gray */
+    transition: all 0.5s ease;
+    border-radius: 50%;
+    z-index: -1; /* Move behind the button */
+    transform: translate(-50%, -50%);
+}
+
+.send-button:hover::before {
+    width: 0;
+    height: 0;
+}
+
+.send-button:hover {
+    animation: glow 1s infinite alternate; /* Add glowing effect on hover */
+    background: #0F1035; /* Change background color on hover */
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px #0F1035, 0 0 20px #0F1035, 0 0 30px #0F1035;
+    }
+    100% {
+        box-shadow: 0 0 20px #0F1035, 0 0 40px #0F1035, 0 0 60px #f5f7f8;
+    }
+}
+
+
+/* footer-section-style */
+.last-section {
+
+    background-color: #000; /* Black background color */
+    padding: 40px 20px; /* Adjust padding for smaller screens */
+    color: #fff; /* Text color */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack components vertically on smaller screens */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center align text */
+}
+
+.last-section .component {
+    flex: 1;
+    width: 100%; /* Make components full width */
+    margin: 10px 0; /* Adjust margin for spacing between components */
+}
+
+.last-section .component.right-component {
+    display: flex; /* Use flexbox for icons */
+    justify-content: center; /* Align icons to the center */
+}
+
+.last-section .component.right-component a {
+    color: #fff; /* Icon color */
+    margin: 0 5px; /* Add spacing between icons */
+    font-size: 24px; /* Adjust icon size */
+}
+
+@media (min-width: 768px) {
+    .last-section {
+        padding: 80px 0; /* Reset padding for larger screens */
+        flex-direction: row; /* Revert to horizontal layout */
+    }
+
+    .last-section .component {
+        width: auto; /* Revert to automatic width */
+        margin: 0 20px; /* Revert to previous margin */
+    }
+}
